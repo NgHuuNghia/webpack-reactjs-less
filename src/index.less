@@ -1,0 +1,57 @@
+// có thể import  .css hay .less con vào.
+// @import "lib.less";
+// @import "/abc/lib.css";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* app styles */
+.App {
+  max-width: 400px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+// variable theo scope của var trong javascript
+@green-color: powderblue;
+
+//Rules : lồng vào nhau
+//css
+nav {
+  padding: 5px;
+
+  ul {
+    padding: 0;
+    
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+}
+
+.book-list {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: @green-color;
+}
+.book-list {
+  ul{
+    padding: 0;
+    list-style-type: none;
+  }
+} 
+.book-list {
+  @padding-10: 10px;
+  li {
+    padding: @padding-10;
+    margin: @padding-10 auto;
+    border-radius: @padding-10;
+  }
+}

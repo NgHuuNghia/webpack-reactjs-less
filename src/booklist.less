@@ -1,0 +1,21 @@
+// mixins + @arguments
+.transition (@opacity) {
+    opacity: @opacity;
+    transition: opacity 300ms ease-in; 
+}
+//css
+.book-enter {
+    opacity: 0;
+}
+
+.book-enter-active {
+    .transition(1)
+}
+
+.book-exit {
+    opacity: 1;
+}
+
+.book-exit-active {
+    .transition(0)
+}
